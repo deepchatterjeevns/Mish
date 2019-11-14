@@ -21,6 +21,18 @@
 
 ### Note - A considerably faster version based on CUDA can be found here - https://github.com/thomasbrandon/mish-cuda (All credits to Thomas Brandon for the same)
 
+## Official Package Based Implementations: 
+
+- [TensorFlow-Addons](https://github.com/tensorflow/addons/tree/master/tensorflow_addons/activations)
+- [SpaCy (Tok2Vec Layer)](https://github.com/explosion/spaCy)
+- [Thinc - SpaCy's official NLP based ML library](https://github.com/explosion/thinc/releases/tag/v7.3.0)
+- [Echo AI](https://github.com/digantamisra98/Echo)
+- [CNTKX - Extension of Microsoft's CNTK](https://github.com/delzac/cntkx)
+- [FastAI-Dev](https://github.com/fastai/fastai_dev/blob/0f613ba3205990c83de9dba0c8798a9eec5452ce/dev/local/layers.py#L441)
+- [Darknet](https://github.com/AlexeyAB/darknet/commit/bf8ea4183dc265ac17f7c9d939dc815269f0a213)
+- [Yolov3](https://github.com/ultralytics/yolov3/commit/444a9f7099d4ff1aef12783704e3df9a8c3aa4b3)
+- [BeeDNN - Library in C++](https://github.com/edeforas/BeeDNN)
+
 Inspired by *Swish* Activation Function ([Paper](https://arxiv.org/abs/1710.05941)), **Mish** is a Self Regularized Non-Monotonic Neural Activation Function. Activation Function serves a core functionality in the training process of a Neural Network Architecture and is represented by the basic mathematical representation: 
 <div style="text-align:center"><img src ="Observations/act.png"  width="500"/></div>
 <em> Image Credits: https://en.wikibooks.org/wiki/Artificial_Neural_Networks/Activation_Functions
@@ -296,9 +308,12 @@ The P-values were computed for different activation functions in comparison to t
 
 ## Results:
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mish-a-self-regularized-non-monotonic-neural/image-classification-on-cifar-100)](https://paperswithcode.com/sota/image-classification-on-cifar-100?p=mish-a-self-regularized-non-monotonic-neural)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mish-a-self-regularized-non-monotonic-neural/image-classification-on-cifar-10)](https://paperswithcode.com/sota/image-classification-on-cifar-10?p=mish-a-self-regularized-non-monotonic-neural)
+
 All results and comparative analysis are present in the [Readme](https://github.com/digantamisra98/Mish/blob/master/Notebooks/Readme.md) file present in the [Notebooks Folder](https://github.com/digantamisra98/Mish/tree/master/Notebooks).
 
-### Summary of Results: 
+### Summary of Results (Vision Tasks): 
 
 *Comparison is done based on the high priority metric, for image classification the Top-1 Accuracy while for Generative Networks and Image Segmentation the Loss Metric. Therefore, for the latter, Mish > Baseline is indicative of better loss and vice versa. For Embeddings, the AUC metric is considered.*
 
@@ -306,39 +321,55 @@ All results and comparative analysis are present in the [Readme](https://github.
 |---|---|---|
 |ReLU|55|20|
 |Swish-1|53|22|
-|SELU|23|1|
-|ELU(α=1.0)|21|4|
-|Sigmoid|20|0|
-|TanH|20|0|
-|HardShrink(λ = 0.5)|20|0|
-|Softsign|20|1|
-|Tanhshrink|19|0|
-|Softshrink (λ = 0.5)|19|1|
-|Hardtanh|19|1|
-|PReLU(Default Parameters)	|19|2|
-|E-Swish (β=1.75)|18|7|
-|GELU|17|2|
-|CELU(α=1.0)|17|2|
-|LogSigmoid|17|3|
-|SoftPlus(β = 1)|16|4|
-|ReLU6|15|5|
-|Leaky ReLU(α=0.3)|14|7|
-|Aria-2(β = 1, α=1.5)|13|2|
-|SQNL|12|0|
-|RReLU|12|8|
-|ISRU (α=1.0)|9|0|
-|Bent's Identity|9|3|
-|Hard ELisH|8|1|
-|Soft Clipping (α=0.5)|8|1|
-|Le Cun's TanH|8|1|
-|Weighted TanH (Weight = 1.7145)|8|1|
-|SineReLU (ε = 0.001)|8|2|
-|Flatten T-Swish|8|2|
-|ELisH|6|3|
-|SReLU|6|3|
-|ISRLU (α=1.0)|6|3|
+|SELU|26|1|
+|Sigmoid|24|0|
+|TanH|23|0|
+|HardShrink(λ = 0.5)|23|0|
+|PReLU(Default Parameters)	|23|2|
+|Tanhshrink|22|0|
+|Softsign|22|1|
+|Softshrink (λ = 0.5)|22|1|
+|Hardtanh|21|2|
+|ELU(α=1.0)|21|7|
+|LogSigmoid|20|4|
+|GELU|19|3|
+|E-Swish (β=1.75)|19|7|
+|CELU(α=1.0)|18|5|
+|SoftPlus(β = 1)|17|7|
+|Leaky ReLU(α=0.3)|17|8|
+|ReLU6|16|8|
+|Aria-2(β = 1, α=1.5)|15|2|
+|SQNL|13|1|
+|RReLU|12|11|
+|ISRU (α=1.0)|10|1|
+|Weighted TanH (Weight = 1.7145)|10|1|
+|Le Cun's TanH|10|2|
+|Bent's Identity|10|5|
+|Hard ELisH|9|1|
+|Flatten T-Swish|9|3|
+|SineReLU (ε = 0.001)|9|3|
+|Soft Clipping (α=0.5)|9|3|
+|ISRLU (α=1.0)|8|4|
+|ELisH|7|3|
+|SReLU|6|6|
 |Hard Sigmoid|1|0|
 |Thresholded ReLU(θ=1.0)|1|0|
+
+### Summary of Results (Language Tasks): 
+
+*Comparison is done based on the best metric score (Test accuracy) across 3 runs.*
+
+|Activation Function| Mish > Baseline Model | Mish < Baseline Model |
+|---|---|---|
+|Penalized TanH|4|0|
+|ELU|4|0|
+|Sigmoid|4|0|
+|SReLU|3|0|
+|TanH|3|1|
+|Swish|2|2|
+|GELU|1|2|
+|ReLU|1|3|
+|Leaky ReLU|1|3|
 
 #### Sample Result: 
 

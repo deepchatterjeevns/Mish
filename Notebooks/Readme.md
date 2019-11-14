@@ -213,7 +213,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |---|---|---|---|---|
 |Mish|**92.58%**|4.16525%|98.97%|99.72%|
 |Swish-1|92.22%|**4.16021%**|**98.99%**|**99.75%**|
-|ReLU|91.93%|4.22357%|98.85%|99.75%|
+|ReLU|91.93%|4.22357%|98.85%|**99.75%**|
 
 <div style="text-align:center"><img src ="Observations/res1102.png"  width="1000"/></div>
 
@@ -330,7 +330,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |E-Swish (β = 1.75)|90.6349%|4.89817%|98.6551%|
 |Aria-2(β = 1, α=1.5)|91.23%|4.339%|98.86%|
 |ELisH|90.62%|4.72%|98.66%|
-|SineReLU (ε = 0.001)|**91.54%**|**4.266%**|98.75%|
+|SineReLU (ε = 0.001)|**91.54%**|4.266%|98.75%|
 |Hard ELisH|91.16%|4.694%|98.65%|
 |Flatten T-Swish|90.87%|4.659%|98.66%|
 |SQNL|90.69%|4.472%|98.68%|
@@ -347,7 +347,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |PReLU|89.62%|5.518%|98.53%|
 |ReLU6|90.57%|4.865%|98.6%|
 |SELU|91%|4.505%|98.63%|
-|RReLU|90.92%|4.22%|98.93%|
+|RReLU|90.92%|**4.22%**|98.93%|
 |Sigmoid|89.74%|4.811%|98.58%|
 |CELU (α=1.0)|90.8%|4.505%|98.75%|
 |Softplus(β = 1)|90.52%|4.944%|98.63%|
@@ -370,7 +370,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |E-Swish (β = 1.75)|90.6547%|5.01813%|98.4771%|
 |GELU|90.92%|4.662%|98.67%|
 |Aria-2(β = 1, α=1.5)|90.24%|5.056%|98.53%|
-|Bent's Identity|**91.72%**|**4.227%**|**98.81%**|
+|Bent's Identity|**91.72%**|**4.227%**|98.81%|
 |SQNL|90.18%|5.046%|98.62%|
 |ELisH|91.36%|4.78%|98.83%|
 |Flatten T-Swish|90.95%|4.794%|98.66%|
@@ -378,7 +378,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |ISRLU (α=1.0)|91.07%|4.743%|98.7%|
 |Soft Clipping (α=0.5)|91.29%|4.826%|98.7%|
 |Hard ELisH|90.6%|5.044%|98.79%|
-|SineReLU (ε = 0.001)|91.3%|4.82%|98.82%|
+|SineReLU (ε = 0.001)|91.3%|4.82%|**98.82%**|
 |Weighted TanH (Weight = 1.7145)|89.81%|5.339%|98.39%|
 |LeCun's TanH|89.73%|5.521%|98.54%|
 |SReLU|90.96%|4.505%|98.76%|
@@ -387,6 +387,15 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |HardTanh|90.33%|5.115%|98.51%|
 |Softshrink (λ=0.5)|91.14%|4.517%|98.75%|
 |SELU|90.21%|4.704%|98.54%|
+|ReLU6|91.35%|4.253%|98.82%|
+|PReLU|89.71%|5.865%|98.56%|
+|CELU(α=1.0)|90.3%|5.12%|98.44%|
+|LeakyReLU (α=0.3)|90.03%|5.177%|98.45%|
+|LogSigmoid|90.56%|5.246%|98.75%|
+|Sigmoid|89.28%|5.698%|98.47%|
+|Softplus(β = 1)|89.81%|5.444%|98.53%|
+|Tanhshrink|90.49%|4.873%|98.64%|
+|Tanh|90.61%|4.836%|98.55%|
 
 <div style="text-align:center"><img src ="Observations/dense161.png"  width="1000"/></div>
 
@@ -404,7 +413,31 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |ELisH|91.16%|4.659%|98.68%|
 |Hard ELisH|90.7%|4.762%|98.63%|
 |SineReLU (ε = 0.001)|90.5%|5.101%|98.47%|
-|FTS|90.19%|5.169%|98.42%|
+|Flatten T-Swish|90.19%|5.169%|98.42%|
+|SQNL|90.61%|4.805%|98.59%|
+|ISRU (α=1.0)|90.59%|4.835%|98.6%|
+|Bent's Identity|90.77%|4.757%|98.76%|
+|ISRLU (α=1.0)|90.11%|5.137%|98.14%|
+|Soft Clipping (α=0.5)|90.75%|4.862%|98.81%|
+|LeCun's TanH|91.13%|4.5%|98.66%|
+|SReLU|90.62%|4.783%|98.61%|
+|ELU (α=1.0)|91.11%|4.577%|98.81%|
+|HardShrink(λ=0.5)|88.5%|5.701%|98.24%|
+|Hardtanh|90.33%|4.991%|98.84%|
+|LeakyReLU (α=0.3)|90.39%|5.12%|98.55%|
+|LogSigmoid|90.35%|5.498%|98.45%|
+|PReLU|89.38%|5.976%|98.5%|
+|ReLU6|90.88%|5.215%|98.51%|
+|RReLU|90.79%|4.773%|98.66%|
+|SELU|90.47%|4.736%|98.42%|
+|CELU(α=1.0)|90.62%|4.919%|98.59%|
+|Sigmoid|90.24%|5.052%|98.38%|
+|Softplus(β = 1)|90.7%|5.216%|98.68%|
+|Softshrink(λ=0.5)|89.41%|5.622%|98.44%|
+|Softsign|90.44%|4.949%|98.54%|
+|Tanh|90.09%|4.988%|98.58%|
+|Tanhshrink|89.7%|5.449%|98.43%|
+|GELU|89.93%|4.992%|98.64%|
 
 <div style="text-align:center"><img src ="Observations/dense169.png"  width="1000"/></div>
 
@@ -412,10 +445,38 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 
 |Activation Function | Testing Top-1 Accuracy|Loss|Testing Top-3 Accuracy|
 |---|---|---|---|
-|ReLU|90.7239%|5.02072%|**98.6946%**|
-|Swish-1|**91.0107%**|**4.76944%**|98.665%|
+|ReLU|90.7239%|5.02072%|98.6946%|
+|Swish-1|91.0107%|4.76944%|98.665%|
 |Mish|90.7338%|4.81563%|98.5364%|
 |E-Swish (β = 1.75)|90.6349%|4.89817%|98.6551%|
+|GELU|89.63%|5.644%|98.18%|
+|Aria-2(β = 1, α=1.5)|90.45%|4.858%|98.7%|
+|E-Swish (β = 1.75)|90.3%|5.271%|98.56%|
+|ELisH|89.79%|5.275%|98.62%|
+|Hard ELisH|89.53%|5.737%|98.35%|
+|SineReLU (ε = 0.001)|90.34%|5.088%|98.58%|
+|Flatten T-Swish|89.66%|5.419%|98.49%|
+|SQNL|90.64%|4.778%|98.82%|
+|ISRU (α=1.0)|88.05%|5.946%|98%|
+|Bent's Identity|90.66%|4.696%|98.63%|
+|ISRLU (α=1.0)|90.25%|5.04%|98.54%|
+|Soft Clipping (α=0.5)|90.96%|4.722%|**98.87%**|
+|LeCun's TanH|88.76%|5.625%|98.11%|
+|SReLU|**91.22%**|4.571%|98.66%|
+|Weighted TanH (Weight = 1.7145)|88.69%|5.69%|98.1%|
+|ELU (α=1.0)|90.91%|4.567%|98.67%|
+|Hardtanh|90.91%|4.505%|98.69%|
+|HardShrink(λ=0.5)|89.84%|5.374%|98.26%|
+|LeakyReLU (α=0.3)|90.52%|4.994%|98.56%|
+|LogSigmoid|90.61%|5.177%|98.63%|
+|PReLU|90.71%|5.149%|98.73%|
+|ReLU6|91.37%|4.622%|98.8%|
+|RReLU|91.03%|4.682%|98.69%|
+|SELU|90.47%|4.786%|98.66%|
+|CELU(α=1.0)|91.21%|**4.445%**|98.73%|
+|Sigmoid|89.71%|5.608%|98.42%|
+|Softplus(β = 1)|91.22%|5.116%|98.62%|
+|Softshrink(λ=0.5)|89.65%|5.232%|98.61%|
 
 <div style="text-align:center"><img src ="Observations/dense201.png"  width="1000"/></div>
 
@@ -426,9 +487,35 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |Activation Function | Testing Top-1 Accuracy|Loss|Testing Top-3 Accuracy|
 |---|---|---|---|
 |ReLU|89.3592%|5.55392%|98.4771%|
-|Swish-1|**91.6238%**|**4.18871%**|98.665%|
+|Swish-1|91.6238%|4.18871%|98.665%|
 |Mish|90.8327%|4.61261%|98.5364%|
-|E-Swish (β = 1.75)|91.4557%|4.67145%|**98.7441%**|
+|E-Swish (β = 1.75)|91.4557%|4.67145%|98.7441%|
+|ELU (α=1.0)|91.39%|4.363%|98.85%|
+|HardShrink(λ=0.5)|89.31%|4.949%|98.31%|
+|Hardtanh|89.16%|5.451%|98.41%|
+|LeakyReLU (α=0.3)|90.91%|4.788%|98.75%|
+|LogSigmoid|90.91%|4.561%|98.86%|
+|PReLU|89.92%|4.962%|98.38%|
+|RReLU|91.1%|4.357%|98.78%|
+|ReLU6|90.35%|4.861%|98.57%|
+|SELU|90.67%|4.841%|98.55%|
+|CELU(α=1.0)|91.2%|4.614%|98.71%|
+|Sigmoid|90.18%|5.062%|98.51%|
+|Softplus(β = 1)|**91.65%**|**4.103%**|**98.95%**|
+|Tanh|90.02%|4.744%|98.52%|
+|Tanhshrink|87.55%|6.443%|97.88%|
+|Softshrink(λ=0.5)|89.17%|5.448%|98.23%|
+|Softsign|89.8%|4.986%|98.33%|
+|Bent's Identity|91.1%|4.558%|98.55%|
+|Aria-2(β = 1, α=1.5)|88.94%|4.591%|98.12%|
+|SineReLU (ε = 0.001)|90.84%|4.682%|98.55%|
+|Soft Clipping (α=0.5)|85.09%|4.804%|97.48%|
+|Weighted TanH (Weight = 1.7145)|72.58%|11.649%|92.84%|
+|LeCun's TanH|87.6%|5.786%|97.69%|
+|GELU|90.89%|4.555%|98.67%|
+|SReLU|90.92%|4.491%|98.83%|
+|Flatten T-Swish|91.15%|4.717%|98.57%|
+|ISRLU (α=1.0)|91.01%|4.729%|98.57%|
 
 <div style="text-align:center"><img src ="Observations/resnext50.png"  width="1000"/></div>
 
@@ -634,7 +721,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 
 |Activation Function | Testing Top-1 Accuracy|Loss|Testing Top-3 Accuracy|
 |---|---|---|---|
-|Mish|87.3121%|5.89664%|**97.7354%**|
+|Mish|87.3121%|5.89664%|97.7354%|
 |Swish-1|86.9462%|6.05925%|97.6859%|
 |ReLU|87.0451%|5.81928%|97.5277%|
 |E-Swish(β = 1.75)|84.0882%|7.15842%|96.7168%|
@@ -644,10 +731,10 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |Hardtanh|83.95%|6.043%|96.79%|
 |LogSigmoid|86.82%|5.846%|97.67%|
 |PReLU|87.15%|5.859%|97.60%|
-|RReLU|**87.84%**|**5.309%**|97.71%|
+|RReLU|**87.84%**|5.309%|97.71%|
 |ReLU6|86.46%|6.096%|97.59%|
 |SELU|86.98%|5.62%|97.72%|
-|CELU(α=1.0)|87.27%|5.617%|97.76%|
+|CELU(α=1.0)|87.27%|5.617%|**97.76%**|
 |Sigmoid|42.51%|28.847%|76.09%|
 |Softplus(β = 1)|87.33%|5.673%|97.54%|
 |Tanh|83.98%|6.046%|97.12%|
@@ -667,7 +754,7 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |Soft Clipping (α=0.5)|13.97%|61.918%|80.32%|
 |SReLU|87.34%|5.34%|97.69%|
 |Weighted TanH (Weight = 1.7145)|82.72%|6.239%|96.45%|
-|Le Cun's TanH|86.67%|5.199%|97.63%|
+|Le Cun's TanH|86.67%|**5.199%**|97.63%|
 
 <div style="text-align:center"><img src ="Observations/shuffle.png"  width="1000"/></div>
 
@@ -1050,9 +1137,9 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |Mish|51.93%|36.463%|69.65%|
 |Tanhshrink|37.11%|39.92%|56.34%|
 |Tanh|47.2%|35.182%|66.92%|
-|Softsign|49.63%|33.112%|68.37%|
+|Softsign|49.63%|**33.112%**|68.37%|
 |Softshrink(λ=0.5)|42.96%|36.482%|62.19%|
-|Softplus(β = 1)|51.87%|**35.867%**|**70.94%**|
+|Softplus(β = 1)|51.87%|35.867%|**70.94%**|
 |Sigmoid|51.67%|36.433%|70.32%|
 |CELU(α=1.0)|51.06%|37.188%|69.10%|
 |SELU|51.76%|36.285%|69.50%|
@@ -1088,13 +1175,13 @@ The Confusion Matrix obtained after 100 epoch training of ResNet v2 with Mish on
 |PReLU|55.08%|26.912%|74.34%|
 |ReLU6|55.87%|24.033%|76.05%|
 |Sigmoid|47.01%|20.466%|68.86%|
-|SELU|56.43%|**19.885%**|76.5%|
+|SELU|56.43%|19.885%|76.5%|
 |CELU(α=1.0)|56.72%|23.15%|76.54%|
 |Leaky ReLU(α=0.3)|57.8%|22.393%|77.11%|
 |Softplus(β = 1)|55.03%|19.935%|75.9%|
 |E-Swish (β = 1.75)|55.44%|28.506%|75.17%|
 |GELU|55.64%|26.27%|75.18%|
-|Aria-2(β = 1, α=1.5)|54.61%|19.067%|75.34%|
+|Aria-2(β = 1, α=1.5)|54.61%|**19.067%**|75.34%|
 
 <div style="text-align:center"><img src ="Observations/mobilev2c100.png"  width="1000"/></div>
 
@@ -1393,3 +1480,81 @@ Some samples generated over 100 epochs and the Discriminator and Generator Loss 
 |Swish-1|0.797871375706|
 |Mish|**0.79815630082**|
 
+## Natural Language Processing Tasks:
+
+### Sequence Tagging:
+
+- Dataset - CoNLL 2003 NER format
+- Number of Runs - 3
+
+#### Bi-LSTM CRF:
+
+|Activation Function|Best Accuracy|Mean Accuracy|Standard Deviation of Accuracy|Best Loss|Mean Loss|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|Mish|97.22%|96.61%|0.44|4.056%|4.487%|
+|Swish|97.12%|96.88%|**0.18**|4.121%|4.356%|
+|ReLU|**98.44%**|**97.73%**|0.81|**3.171%**|**3.734%**|
+|TanH|93%|92.15%|0.64|7.241%|8.047%|
+|Penalized TanH|96%|95.26%|0.58|4.913%|5.364%|
+|Leaky ReLU|98.16%|97.56%|0.56|3.922%|3.934%|
+|GELU|91.56%|90.61%|0.67|8.742%|8.997%|
+|ELU|92.14%|90.84%|1.24|8.019%|8.98%|
+|SReLU|96.25%|95.35%|0.64|4.896%|5.405%|
+|Sigmoid|90.45%|88.55%|1.87|9.245%|10.931%|
+
+### Doument Classification:
+
+- Dataset - IMBD 
+- Number of Runs - 3
+
+#### CNN:
+
+|Activation Function|Mean Accuracy|Best Accuracy|Best Loss|Mean Loss|
+|:---:|:---:|:---:|:---:|:---:|
+|Mish|88.38%|88.56%|5.4%|5.42%|
+|Swish|88.14%|88.29%|7.99%|8.03%|
+|ReLU|88.24%|88.36%|4.82%|4.85%|
+|TanH|**89.66%**|**89.82%**|**3.01%**|**3.66%**|
+|Penalized TanH|87.84%|88.06%|4.42%|4.65%|
+|Leaky ReLU|87.96%|88.11%|5.47%|6.12%|
+|ELU|88.1%|88.16%|4.59%|4.87%|
+|Sigmoid|85.18%|85.47%|4.21%|5.01%|
+
+- [Dataset](http://competition.ai100.com.cn/html/game_det.html?id=24)
+- Number of Runs - 3
+
+#### CNN:
+
+|Activation Function|Mean Accuracy|Best Accuracy|Best Loss|Mean Loss|Standard Deviation of Accuracy|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|Mish|91.37%|91.38%|2.121%|2.122%|0.0000816479|
+|Swish|91.4533%|91.52%|2.105%|2.10633%|0.000478|
+|ReLU|91.4833%|91.55%|2.165%|2.167%|0.000531|
+|TanH|90.82%|90.84%|2.308%|2.31533%|0.000943|
+|Penalized TanH|90.9%|90.91%|2.115%|2.11667%|0.0000816479|
+|Leaky ReLU|**91.63%**|**91.7%**|**2.089%**|**2.09233%**|0.000497|
+|GELU|91.5467%|91.56%|2.102%|2.10467%|0.0000943|
+|ELU|91.0333%|91.04%|2.23%|2.29%|0.0000943|
+|SReLU|90.7733%|90.8%|2.29%|2.29627%|0.000249|
+|Sigmoid|49.61%|49.61%|6.939%|6.939%|**0**|
+
+
+### Sentence Classification: 
+
+- Dataset - Large IMBD
+- Number of Runs - 3
+
+#### CNN:
+
+|Activation Function|Mean Accuracy|Best Accuracy|Best Loss|Mean Loss|Standard Deviation of Accuracy|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|Mish|91.1367%|91.14%|2.143%|2.144%|0.0000471405|
+|Swish|91.4867%|91.52%|2.115%|2.116%|0.000403|
+|ReLU|91.4833%|91.55%|2.165%|2.167%|0.000531|
+|TanH|90.7433%|90.82%|2.315%|2.33233%|0.000613|
+|Penalized TanH|90.9%|90.91%|2.115%|2.11667%|0.0000816|
+|Leaky ReLU|**91.6267%**|**91.7%**|**2.094%**|**2.095%**|0.000519|
+|GELU|91.5667%|91.59%|2.107%|2.11333%|0.000205|
+|ELU|91.0333%|91.04%|2.21%|2.22333%|0.0000471405|
+|SReLU|90.7433%|90.8%|2.291%|2.294%|0.00045|
+|Sigmoid|51.24%|51.24%|7.134%|7.134%|**0**|
